@@ -1,0 +1,73 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --cell-size: 100px;
+    --big-size: calc(var(--cell-size) * .8);
+    --small-size: calc(var(--cell-size) * .5);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    border: 1px solid black;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.cell {
+    border: 1px solid black;
+    background-color: hsl(0, 0%, 80%);
+
+    height: var(--cell-size);
+    width: var(--cell-size);
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell.big-circle::before,
+.cell.big-square::before,
+.cell.small-circle::before,
+.cell.small-square::before {
+    content: "";
+    position: absolute;
+
+    background-color: hsl(0, 0%, 20%);
+}
+
+.cell.big-circle::before,
+.cell.small-circle::before {
+    border-radius: 50%;
+}
+
+.cell.big-circle::before,
+.cell.big-square::before {
+    width: var(--big-size);
+    height: var(--big-size);
+}
+
+.cell.small-circle::before,
+.cell.small-square::before {
+    width: var(--small-size);
+    height: var(--small-size);
+}
