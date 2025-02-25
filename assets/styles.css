@@ -4,8 +4,8 @@
 
 :root {
     --cell-size: 60px;
-    --big-size: calc(var(--cell-size) * .8);
-    --small-size: calc(var(--cell-size) * .3);
+    --big-size: calc(var(--cell-size) * 1.1);
+    --small-size: calc(var(--cell-size) * .4);
     --bg: 
 }
 
@@ -39,8 +39,8 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .cell.big-circle::before,
@@ -82,6 +82,9 @@ body {
 .cell.circle-square::after{
     width: var(--small-size);
     height: var(--small-size);
+
+    top: 20px;
+    left: 20px;
 
     background-color: hwb(35 0% 85%);
 }

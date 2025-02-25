@@ -44,10 +44,5 @@ const addCircleSquare = function(cell) {
     cell.classList.add("circle-square");
 }
 
-setInterval(() => {
-    resetClasses();
-    addShape();
-}, 400);
-
 document.addEventListener("DOMContentLoaded", addShape);
 
