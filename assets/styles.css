@@ -6,7 +6,8 @@
     --cell-size: 60px;
     --big-size: calc(var(--cell-size) * 1.1);
     --small-size: calc(var(--cell-size) * .4);
-    --bg: 
+    --bg: hwb(35 0% 85%);
+    --main: hsl(206, 100%, 80%);
 }
 
 body {
@@ -22,7 +23,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-color: hwb(35 0% 85%);
+    background-color: var(--bg);
 
 }
 
@@ -53,8 +54,7 @@ body {
 .cell.circle-square::after {
     content: "";
     position: absolute;
-
-    background-color: hsl(206, 100%, 80%);
+    background-color: var(--main);
 }
 
 .cell.big-circle::before,
@@ -86,5 +86,5 @@ body {
     top: 20px;
     left: 20px;
 
-    background-color: hwb(35 0% 85%);
+    background-color: var(--bg)
 }

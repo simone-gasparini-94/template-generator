@@ -6,8 +6,7 @@ const resetClasses = function() {
         cell.classList.remove("big-circle", "big-square", "small-circle", "small-square", "square-circle", "circle-square");
     })
 }
-const addShape = function() {
-    
+const addShape = function() {  
     cells.forEach((cell => {
         const randomizer = Math.floor(Math.random() * 6);
 
